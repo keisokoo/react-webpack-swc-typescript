@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
-import useAuth from '../lib/coils/auth'
+import useAuth from '@src/lib/coils/auth'
+
 const Wrap = styled.div``
 const Dashboard = () => {
   const { reset } = useAuth()

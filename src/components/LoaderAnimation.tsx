@@ -1,6 +1,7 @@
 import { SerializedStyles } from '@emotion/react'
 import styled from '@emotion/styled'
-import { addCssProps } from '../themes/attachments'
+import loader from '@src/lib/sources/loader.json'
+import { addCssProps } from '@src/themes/attachments'
 import lottie, {
   AnimationConfig,
   AnimationConfigWithData,
@@ -8,7 +9,6 @@ import lottie, {
 } from 'lottie-web'
 import { MutableRefObject, useEffect, useRef } from 'react'
 import { v4 as uuidV4 } from 'uuid'
-import loader from '../lib/sources/loader.json'
 
 const LoaderAnimationWrap = styled.div`
   ${addCssProps}

@@ -1,6 +1,6 @@
+import CustomRouter from '@src/CustomRouter'
+import RoutesComponent from '@src/routes'
 import { RecoilRoot } from 'recoil'
-import CustomRouter from './CustomRouter'
-import RoutesComponent from './routes'
 
 const App = () => {
   return (

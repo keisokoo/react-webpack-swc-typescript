@@ -1,3 +1,4 @@
+import { handleObjectToLocalStorage } from '@src/lib/utils'
 import { useCallback } from 'react'
 import {
   atom,
@@ -7,7 +8,6 @@ import {
   useResetRecoilState,
   useSetRecoilState,
 } from 'recoil'
-import { handleObjectToLocalStorage } from '../utils'
 
 export const isDefaultValue = (value: any): value is DefaultValue => {
   if (value instanceof DefaultValue) return true

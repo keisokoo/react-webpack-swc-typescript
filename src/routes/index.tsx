@@ -1,11 +1,11 @@
+import AuthGuard from '@src/layout/AuthGuard'
+import Layout from '@src/layout/Layout'
+import Loading from '@src/layout/Loading'
+import Dashboard from '@src/routes/Dashboard'
+import Page404 from '@src/routes/Page404'
+import Redirect from '@src/routes/Redirect'
 import { Suspense } from 'react'
 import { RouteObject, useRoutes } from 'react-router-dom'
-import AuthGuard from '../layout/AuthGuard'
-import Layout from '../layout/Layout'
-import Loading from '../layout/Loading'
-import Dashboard from './Dashboard'
-import Page404 from './Page404'
-import Redirect from './Redirect'
 
 export const mainRoutes = [
   {

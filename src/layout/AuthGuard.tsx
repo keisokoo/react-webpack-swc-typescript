@@ -1,9 +1,9 @@
-import { useEffect } from 'react'
 import useAuth, {
   handleTokenToLocalStorage,
   isToken,
   TokenType,
-} from '../lib/coils/auth'
+} from '@src/lib/coils/auth'
+import { useEffect } from 'react'
 
 interface AuthGuardProps {
   children?: React.ReactNode

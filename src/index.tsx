@@ -1,6 +1,6 @@
+import App from '@src/App'
+import '@src/index.scss'
 import 'modern-normalize/modern-normalize.css'
 import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.scss'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(<App />)

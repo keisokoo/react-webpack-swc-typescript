@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
+import { rootNavigate } from '@src/CustomRouter'
 import { useEffect } from 'react'
-import { rootNavigate } from '../CustomRouter'
 
 const Page404Wrap = styled.div`
   width: 100vw;
