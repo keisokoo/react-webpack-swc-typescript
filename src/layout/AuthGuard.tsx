@@ -4,6 +4,7 @@ import useAuth, {
   TokenType,
 } from '@src/lib/coils/auth'
 import { useEffect } from 'react'
+import Loading from './Loading'
 
 interface AuthGuardProps {
   children?: React.ReactNode
@@ -33,7 +34,7 @@ const AuthGuard = ({ children, ...props }: AuthGuardProps) => {
   }, [status])
   if (status === 'authorized') {
     return <>{children}</>
-  } else {
+  } else if (status === 'unauthorized') {
     return (
       <>
         <div>
@@ -55,6 +56,8 @@ const AuthGuard = ({ children, ...props }: AuthGuardProps) => {
         </div>
       </>
     )
+  } else {
+    return <Loading className="fixed" _rgba={[236, 69, 69, 1]} />
   }
 }
 export default AuthGuard

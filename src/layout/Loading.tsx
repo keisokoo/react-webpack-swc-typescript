@@ -25,10 +25,11 @@ interface LoadingProps
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
+  _rgba?: [number, number, number, number]
   _css?: SerializedStyles
   _delay?: number
 }
-const Loading = ({ _css, _delay, ...props }: LoadingProps) => {
+const Loading = ({ _css, _delay, _rgba, ...props }: LoadingProps) => {
   return (
     <LoaderWrap _css={_css} {...props}>
       <LoaderAnimation
@@ -37,6 +38,7 @@ const Loading = ({ _css, _delay, ...props }: LoadingProps) => {
           height: 150px;
         `}
         _delay={_delay}
+        _rgba={_rgba}
       />
     </LoaderWrap>
   )

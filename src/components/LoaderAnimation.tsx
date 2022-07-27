@@ -21,11 +21,24 @@ interface LoaderAnimationProps
     React.HTMLAttributes<HTMLDivElement>,
     HTMLDivElement
   > {
+  _rgba?: [number, number, number, number]
   _css?: SerializedStyles
   _config?: AnimationConfig
   _delay?: number
 }
+const replaceTo255 = (num: number) => {
+  return num / 255
+}
+const rgbaReplace = (r: number, g: number, b: number, a: number) => {
+  const loaderString = JSON.stringify(loader)
+  const parsed = loaderString.replaceAll(
+    '0.247,0.247,0.247,1',
+    `${replaceTo255(r)},${replaceTo255(g)},${replaceTo255(b)},${a}`
+  )
+  return JSON.parse(parsed)
+}
 const LoaderAnimation = ({
+  _rgba,
   _config,
   _css,
   _delay,
@@ -35,6 +48,10 @@ const LoaderAnimation = ({
   const nameRef = useRef(uuidV4()) as MutableRefObject<string>
   useEffect(() => {
     if (!nameRef.current) return
+    let replaced = loader
+    if (_rgba) {
+      replaced = rgbaReplace(_rgba[0], _rgba[1], _rgba[2], _rgba[3])
+    }
     let lottieName = nameRef.current
     let config: AnimationConfigWithData = {
       container: lottieRef.current,
@@ -42,7 +59,7 @@ const LoaderAnimation = ({
       loop: true,
       name: lottieName,
       autoplay: true,
-      animationData: loader,
+      animationData: replaced,
     }
     if (_config) {
       config = { ...config, ..._config }
