@@ -9,7 +9,7 @@ import {
   useSetRecoilState,
 } from 'recoil'
 
-export const isDefaultValue = (value: any): value is DefaultValue => {
+export const isDefaultValue = (value: unknown): value is DefaultValue => {
   if (value instanceof DefaultValue) return true
   return false
 }

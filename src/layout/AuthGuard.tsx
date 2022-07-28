@@ -9,7 +9,7 @@ import Loading from './Loading'
 interface AuthGuardProps {
   children?: React.ReactNode
 }
-const AuthGuard = ({ children, ...props }: AuthGuardProps) => {
+const AuthGuard = ({ children }: AuthGuardProps) => {
   const { status, setToken } = useAuth()
   useEffect(() => {
     const checkAuth = async (token: TokenType) => {
@@ -40,7 +40,7 @@ const AuthGuard = ({ children, ...props }: AuthGuardProps) => {
         <div>
           <button
             onClick={async () => {
-              let testToken = {
+              const testToken = {
                 accessToken:
                   'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJsIjowLCJpYXQiOjE2NTg3OTY4NjcsImV4cCI6MTY1ODc5NzQ2N30.n0J56HnDAZfhIZgQA8NnqL9psMDaVgjh-F2f5P8Loro',
                 accessTokenExpiresIn: '2022-07-26 10:04:27.12400 GMT+9',

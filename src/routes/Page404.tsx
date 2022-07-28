@@ -10,8 +10,7 @@ const Page404Wrap = styled.div`
   justify-content: center;
 `
 
-interface Page404Props {}
-const Page404 = ({ ...props }: Page404Props) => {
+const Page404 = () => {
   useEffect(() => {
     setTimeout(() => {
       rootNavigate('/')

@@ -34,7 +34,7 @@ export const routes: RouteObject[] = [
   { path: '*', element: <Page404 /> },
 ]
 const RoutesComponent = () => {
-  let element = useRoutes(routes)
+  const element = useRoutes(routes)
   return <>{element}</>
 }
 export default RoutesComponent

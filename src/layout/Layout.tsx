@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom'
 
-interface LayoutProps {}
-const Layout = ({ ...props }: LayoutProps) => {
+const Layout = () => {
   return (
     <>
       <Outlet />

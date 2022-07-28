@@ -52,7 +52,7 @@ const LoaderAnimation = ({
     if (_rgba) {
       replaced = rgbaReplace(_rgba[0], _rgba[1], _rgba[2], _rgba[3])
     }
-    let lottieName = nameRef.current
+    const lottieName = nameRef.current
     let config: AnimationConfigWithData = {
       container: lottieRef.current,
       renderer: 'svg',
@@ -64,7 +64,7 @@ const LoaderAnimation = ({
     if (_config) {
       config = { ...config, ..._config }
     }
-    let lottiePlayer = lottie as LottiePlayerExtend
+    const lottiePlayer = lottie as LottiePlayerExtend
     const lottieDOM = lottieRef.current
     if (lottieDOM) {
       setTimeout(() => {

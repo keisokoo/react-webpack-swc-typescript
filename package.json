@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode=development",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "lint": "eslint --ext \"./src/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint:fix": "eslint --ext \"./src/**/*.{js,jsx,ts,tsx,json}\" --fix"
   },
   "author": "keisokoo",
   "license": "ISC",
@@ -19,16 +21,23 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "recoil": "^0.7.4",
+    "typescript": "^4.7.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.218",
+    "@types/node": "^18.6.2",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/parser": "^5.31.0",
     "css-loader": "^6.7.1",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react": "^7.30.1",
     "html-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
     "interpolate-html-plugin": "^4.0.0",

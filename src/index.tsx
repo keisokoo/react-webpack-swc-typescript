@@ -3,4 +3,7 @@ import '@src/index.scss'
 import 'modern-normalize/modern-normalize.css'
 import ReactDOM from 'react-dom/client'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />)
+const rootEl = document.getElementById('root')
+if (rootEl !== null) {
+  ReactDOM.createRoot(rootEl).render(<App />)
+}
