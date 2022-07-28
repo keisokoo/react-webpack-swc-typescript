@@ -9,12 +9,14 @@ import {
   useSetRecoilState,
 } from 'recoil'
 
+// ! 기본 타입 체크
 export const isDefaultValue = (value: unknown): value is DefaultValue => {
   if (value instanceof DefaultValue) return true
   return false
 }
 
 export type AuthStatus = 'authorized' | 'unauthorized' | 'idle'
+
 const tokenTitleList = [
   'accessToken',
   'accessTokenExpiresIn',
@@ -27,7 +29,7 @@ export const isToken = (token: any): token is TokenType => {
 }
 interface AuthStateType {
   token: TokenType | null
-  status: AuthStatus
+  authStatus: AuthStatus
 }
 export const isAuth = (value: any): value is AuthStateType => {
   return true
@@ -36,7 +38,7 @@ export const authState = atom<AuthStateType>({
   key: 'authState',
   default: {
     token: null,
-    status: 'idle',
+    authStatus: 'idle',
   },
 })
 export const tokenControl = selector<TokenType | null>({
@@ -48,7 +50,7 @@ export const tokenControl = selector<TokenType | null>({
       curr = {
         ...curr,
         token: newValue,
-        status: newValue ? 'authorized' : 'unauthorized',
+        authStatus: newValue ? 'authorized' : 'unauthorized',
       }
     }
     return set(authState, curr)

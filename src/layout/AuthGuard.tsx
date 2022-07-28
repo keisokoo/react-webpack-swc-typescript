@@ -10,7 +10,7 @@ interface AuthGuardProps {
   children?: React.ReactNode
 }
 const AuthGuard = ({ children }: AuthGuardProps) => {
-  const { status, setToken } = useAuth()
+  const { authStatus, setToken } = useAuth()
   useEffect(() => {
     const checkAuth = async (token: TokenType) => {
       if (isToken(token)) {
@@ -20,7 +20,7 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
         localStorage.clear()
       }
     }
-    if (status === 'idle') {
+    if (authStatus === 'idle') {
       const localToken: TokenType = {
         accessToken: localStorage.getItem('accessToken') ?? '',
         accessTokenExpiresIn:
@@ -31,10 +31,10 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
       }
       checkAuth(localToken)
     }
-  }, [status])
-  if (status === 'authorized') {
+  }, [authStatus, setToken])
+  if (authStatus === 'authorized') {
     return <>{children}</>
-  } else if (status === 'unauthorized') {
+  } else if (authStatus === 'unauthorized') {
     return (
       <>
         <div>

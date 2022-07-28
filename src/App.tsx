@@ -1,13 +1,16 @@
 import CustomRouter from '@src/CustomRouter'
 import RoutesComponent from '@src/routes'
 import { RecoilRoot } from 'recoil'
+import { RecoilURLSyncJSON } from 'recoil-sync'
 
 const App = () => {
   return (
     <RecoilRoot>
-      <CustomRouter>
-        <RoutesComponent />
-      </CustomRouter>
+      <RecoilURLSyncJSON location={{ part: 'queryParams' }}>
+        <CustomRouter>
+          <RoutesComponent />
+        </CustomRouter>
+      </RecoilURLSyncJSON>
     </RecoilRoot>
   )
 }
