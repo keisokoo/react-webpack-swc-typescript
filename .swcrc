@@ -1,5 +1,19 @@
 {
   "jsc": {
+    "minify": {
+      "keepClassnames": true,
+      "keepFnames": true,
+      "compress": {
+        "ecma": 5,
+        "comparisons": false,
+        "inline": 2,
+        "unused": true
+      },
+      "format": {
+        "safari10": true
+      },
+      "mangle": true
+    },
     "parser": {
       "syntax": "typescript",
       "tsx": true,

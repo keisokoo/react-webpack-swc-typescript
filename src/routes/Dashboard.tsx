@@ -6,7 +6,7 @@ import { useRecoilCallback, useRecoilState } from 'recoil'
 const Wrap = styled.div``
 const Dashboard = () => {
   const { reset } = useAuth()
-  const [aa, set_aa] = useRecoilState(currentUserState)
+  const [currentNumber, set_currentNumber] = useRecoilState(currentUserState)
   // https://recoiljs.org/docs/api-reference/core/useRecoilCallback/
   const currentAuth = useRecoilCallback(
     ({ snapshot }) =>
@@ -19,9 +19,11 @@ const Dashboard = () => {
   return (
     <Wrap>
       <div>Dashboard</div>
-      <div>{aa}</div>
+      <div>{currentNumber}</div>
 
-      <button onClick={() => set_aa((curr) => curr + 1)}>recoil sync</button>
+      <button onClick={() => set_currentNumber((curr) => curr + 1)}>
+        recoil sync
+      </button>
       <button onClick={reset}>sign out</button>
       <button onClick={currentAuth}>check</button>
     </Wrap>
