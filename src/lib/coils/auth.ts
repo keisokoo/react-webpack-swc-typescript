@@ -66,7 +66,8 @@ const useAuth = () => {
   const reset = useCallback(() => {
     localStorage.clear()
     resetToken()
-  }, [])
+  }, [resetToken])
   return { ...auth, setToken, reset }
 }
+
 export default useAuth
