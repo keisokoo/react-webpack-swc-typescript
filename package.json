@@ -1,15 +1,19 @@
 {
-  "name": "react-with-webpack",
+  "name": "react-webpack-swc-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "react boilerplate with swc",
+  "author": "keisokoo <keisokoo@gmail.com> (https://obj.kr/)",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keisokoo/react-webpack-swc-typescript"
+  },
   "scripts": {
     "start": "webpack serve --mode=development",
     "build": "rm -rf build && webpack --mode=production",
     "lint": "eslint --ext \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "lint:fix": "eslint --ext \"./src/**/*.{js,jsx,ts,tsx,json}\" --fix"
   },
-  "author": "keisokoo",
   "license": "ISC",
   "dependencies": {
     "@emotion/react": "^11.9.3",
