@@ -29,7 +29,9 @@ const AuthGuard = ({ children }: AuthGuardProps) => {
         refreshTokenExpiresIn:
           localStorage.getItem('refreshTokenExpiresIn') ?? '',
       }
-      checkAuth(localToken)
+      setTimeout(() => {
+        checkAuth(localToken)
+      }, 3000)
     }
   }, [authStatus, setToken])
   if (authStatus === 'authorized') {

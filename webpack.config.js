@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const InterpolateHtmlPlugin = require('interpolate-html-plugin')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
 process.env.GENERATE_SOURCEMAP = false
 
 const cssRegex = /\.css$/

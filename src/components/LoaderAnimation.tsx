@@ -6,7 +6,7 @@ import lottie, {
   AnimationConfig,
   AnimationConfigWithData,
   LottiePlayer,
-} from 'lottie-web'
+} from 'lottie-web/build/player/lottie_light'
 import { MutableRefObject, useEffect, useRef } from 'react'
 import { v4 as uuidV4 } from 'uuid'
 
