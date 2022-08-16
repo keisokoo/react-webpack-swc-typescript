@@ -1,41 +1,27 @@
 {
   "jsc": {
-    "minify": {
-      "keepClassnames": true,
-      "keepFnames": true,
-      "compress": {
-        "ecma": 5,
-        "comparisons": false,
-        "inline": 2,
-        "unused": true
-      },
-      "format": {
-        "safari10": true
-      },
-      "mangle": true
-    },
+    // "minify": {
+    //   "keepClassnames": true,
+    //   "keepFnames": true,
+    //   "compress": {
+    //     "ecma": 5,
+    //     "comparisons": false,
+    //     "inline": 2,
+    //     "unused": true
+    //   },
+    //   "format": {
+    //     "safari10": true
+    //   },
+    //   "mangle": true
+    // },
     "parser": {
       "syntax": "typescript",
       "tsx": true,
-      "decorators": true,
       "dynamicImport": true
     },
     "transform": {
       "react": {
-        "runtime": "automatic",
-        "importSource": "react"
-        // "pragma": "React.createElement",
-        // "pragmaFrag": "React.Fragment",
-        // "throwIfNamespace": true,
-        // "development": true,
-        // "useBuiltins": false
-      },
-      "optimizer": {
-        "globals": {
-          "vars": {
-            "__DEBUG__": "true"
-          }
-        }
+        "runtime": "automatic"
       }
     }
   }
