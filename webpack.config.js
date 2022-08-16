@@ -30,7 +30,6 @@ function getCSSModuleLocalIdent(context, localIdentName, localName, options) {
   // Remove the .module that appears in every classname when based on the file and replace all "." with "_".
   return className.replace('.module_', '_').replace(/\./g, '_')
 }
-
 process.env.GENERATE_SOURCEMAP = false
 
 const cssRegex = /\.css$/
@@ -237,7 +236,6 @@ module.exports = (currentEnv) => {
             },
             'sass-loader'
           ),
-          sideEffects: true,
         },
         {
           exclude: [/^$/, /\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/],
