@@ -22,10 +22,10 @@ const Dashboard = () => {
       <div>Dashboard</div>
       <div>{currentNumber}</div>
 
-      <PrimaryButton onClick={() => set_currentNumber((curr) => curr + 1)}>
+      <button onClick={() => set_currentNumber((curr) => curr + 1)}>
         recoil sync
-      </PrimaryButton>
-      <button onClick={reset}>sign out</button>
+      </button>
+      <PrimaryButton onClick={reset}>sign out</PrimaryButton>
       <button onClick={currentAuth}>check</button>
     </Wrap>
   )

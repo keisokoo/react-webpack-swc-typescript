@@ -23,12 +23,12 @@
     "transform": {
       "react": {
         "runtime": "automatic",
-        "importSource": "react",
-        "pragma": "React.createElement",
-        "pragmaFrag": "React.Fragment",
-        "throwIfNamespace": true,
-        "development": true,
-        "useBuiltins": false
+        "importSource": "react"
+        // "pragma": "React.createElement",
+        // "pragmaFrag": "React.Fragment",
+        // "throwIfNamespace": true,
+        // "development": true,
+        // "useBuiltins": false
       },
       "optimizer": {
         "globals": {
