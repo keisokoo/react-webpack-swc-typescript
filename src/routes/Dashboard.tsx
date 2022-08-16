@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import useAuth, { authState } from '@src/lib/coils/auth'
 import { currentUserState } from '@src/lib/coils/test'
+import { PrimaryButton } from '@src/themes/Buttons'
 import { useRecoilCallback, useRecoilState } from 'recoil'
 
 const Wrap = styled.div``
@@ -21,9 +22,9 @@ const Dashboard = () => {
       <div>Dashboard</div>
       <div>{currentNumber}</div>
 
-      <button onClick={() => set_currentNumber((curr) => curr + 1)}>
+      <PrimaryButton onClick={() => set_currentNumber((curr) => curr + 1)}>
         recoil sync
-      </button>
+      </PrimaryButton>
       <button onClick={reset}>sign out</button>
       <button onClick={currentAuth}>check</button>
     </Wrap>
