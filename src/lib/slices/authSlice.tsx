@@ -43,9 +43,8 @@ export const authStore = create<AuthSlice>()((...a) => ({
 
 export const getToken = (state: AuthSlice) => state.token
 
-export const authStates = (state: AuthSlice) => ({
-  authState: state.authState,
-})
+export const authStates = (state: AuthSlice) => state.authState
+
 export const getAverage = (data: number[]) => {
   return data.reduce((a, b) => a + b, 0) / data.length
 }
