@@ -1,4 +1,4 @@
-import { handleObjectToLocalStorage } from '@src/lib/utils'
+import { handleObjectToLocalStorage } from '@/lib/utils'
 import { useCallback } from 'react'
 import {
   atom,

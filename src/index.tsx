@@ -1,5 +1,5 @@
-import App from '@src/App'
-import '@src/index.scss'
+import App from '@/App'
+import '@/index.scss'
 import 'modern-normalize/modern-normalize.css'
 import ReactDOM from 'react-dom/client'
 

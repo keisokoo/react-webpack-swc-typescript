@@ -1,7 +1,7 @@
+import loader from '@/lib/sources/loader.json'
+import { addCssProps } from '@/themes/attachments'
 import { SerializedStyles } from '@emotion/react'
 import styled from '@emotion/styled'
-import loader from '@src/lib/sources/loader.json'
-import { addCssProps } from '@src/themes/attachments'
 import lottie, {
   AnimationConfig,
   AnimationConfigWithData,

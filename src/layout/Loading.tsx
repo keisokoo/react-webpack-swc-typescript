@@ -1,7 +1,7 @@
+import LoaderAnimation from '@/components/LoaderAnimation'
+import { addCssProps } from '@/themes/attachments'
 import { css, SerializedStyles } from '@emotion/react'
 import styled from '@emotion/styled'
-import LoaderAnimation from '@src/components/LoaderAnimation'
-import { addCssProps } from '@src/themes/attachments'
 
 const LoaderWrap = styled.div`
   width: 100%;

@@ -132,7 +132,7 @@ module.exports = (currentEnv) => {
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.jsx', '.css', '.scss', '.json'],
       alias: {
-        '@src': path.resolve(__dirname, 'src'),
+        '@': path.resolve(__dirname, 'src'),
       },
     },
     devtool: isDevelopment ? 'source-map' : false,

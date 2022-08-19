@@ -1,6 +1,6 @@
+import useAuth, { authState } from '@/lib/coils/auth'
+import { PrimaryButton } from '@/themes/Buttons'
 import styled from '@emotion/styled'
-import useAuth, { authState } from '@src/lib/coils/auth'
-import { PrimaryButton } from '@src/themes/Buttons'
 import { useRecoilCallback } from 'recoil'
 
 const Wrap = styled.div``

@@ -2,7 +2,7 @@ import useAuth, {
   handleTokenToLocalStorage,
   isToken,
   TokenType,
-} from '@src/lib/coils/auth'
+} from '@/lib/coils/auth'
 import { useEffect } from 'react'
 import Loading from './Loading'
 

@@ -1,5 +1,6 @@
-import CustomRouter from '@src/CustomRouter'
-import RoutesComponent from '@src/routes'
+import CustomRouter from '@/CustomRouter'
+import RoutesComponent from '@/routes'
+import Test from '@/Test'
 import { RecoilRoot } from 'recoil'
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <RecoilRoot>
       <CustomRouter>
         <RoutesComponent />
+        <Test />
       </CustomRouter>
     </RecoilRoot>
   )
